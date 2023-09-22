@@ -1,0 +1,14 @@
+services:
+  tf-gpu:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./src:/app/src
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
