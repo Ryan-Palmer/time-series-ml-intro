@@ -4,3 +4,4 @@ matplotlib
 kaggle
 seaborn
 scikit-learn
+statsmodels
